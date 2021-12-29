@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <math.h>
+
+#include <string.h>
+#include "Test_case_05.h"
+typedef float rReal_T;
+typedef int int32_T;
+typedef unsigned int uint32_T;
+typedef unsigned char boolean_T;
+typedef int sint32;
+
+static int32_T tmp;
+
+static
+struc struc_var_8;
+
+static int staticReturnsTrue()
+{
+	return 1;
+}
+
+void Test_case_05_initialize_08(void)
+{
+    
+    (void)memset((void *)&struc_var_8, 0,
+        sizeof(struc));
+}
+
+
+
+void Test_case_05_08(void)
+{
+	if (staticReturnsTrue())
+	{
+
+		tmp = Test_case_05_Buffer(&struc_var_8.Buffer);
+	}
+	else{
+		assert(0);
+	}
+  
+}
